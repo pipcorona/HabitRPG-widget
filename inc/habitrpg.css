@@ -1,0 +1,181 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+a.habitrpg {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Lato', sans-serif;
+}
+
+#container {
+	position: relative;
+	width: 134px;
+	border: 1px solid #A7C5CB;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 132px;
+	background-color: #D0E0E3;
+	padding: 1px;
+	overflow: hidden;
+}
+
+.text {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 8px;
+	font-family: 'Lato', sans-serif;
+}
+
+#character {
+	position: relative;
+	width: 132px;
+	height: 143px;
+	margin: 0 auto;
+	}
+
+.base {
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	z-index: 10;
+}
+
+.base-mount {
+	position: absolute;
+	top: -6px;
+	left: 25px;
+	z-index: 10;
+}
+
+
+.hair {
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	z-index: 20;
+}
+
+.hair-mount {
+	position: absolute;
+	top: -6px;
+	left: 25px;
+	z-index: 20;
+}
+
+.gear {
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	z-index: 30;
+}
+
+
+.gear-mount {
+	position: absolute;
+	top: -6px;
+	left: 25px;
+	z-index: 30;
+}
+
+.item {
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	z-index: 35;
+}
+
+
+.item-mount {
+	position: absolute;
+	top: -6px;
+	left: 25px;
+	z-index: 35;
+}
+
+.pet {
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	z-index: 50;
+}
+
+.mounthead {
+	position: absolute;
+	top: 12px;
+	left: 25px;
+	z-index: 40;
+}
+
+.mountbody {
+	position: absolute;
+	top: 12px;
+	left: 25px;
+	z-index: 5;
+}
+
+#meters {
+	position: relative;
+	width: 132px;
+}
+
+.meter-wrap{ 
+	width: 130px;
+	height: 17px;
+	position: relative;
+	background: #ebedef;
+	border-radius: 6px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin: 5px auto;
+	overflow: hidden;
+}
+
+.meter-wrap > div{
+	height: 100%;
+}
+
+.meter-wrap .hp {
+	background-color: #D64040;
+}
+
+.meter-wrap .exp {
+	background-color: #FFCF42;
+}
+
+.meter-wrap .mana {
+	background-color: #5288E9;
+}
+
+.meter-text {
+	position: absolute;
+	text-align: right; 
+	width: 98%;
+	margin: 0px;
+	line-height: 16px;
+}
+
+[class^=icon-] {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-top: 2px;
+	margin-right: 3px;
+	line-height: 16px;
+	vertical-align: top;
+	background-image: url(./img/habitrpg/glyphicons-halfling.png);
+	background-position: 14px 14px;
+	background-repeat: no-repeat;
+}
+
+.icon-fire {
+	background-position: -72px -120px;
+}
+
+.icon-star {
+	background-position: -120px 0;
+}
+
+.icon-heart {
+	background-position: -96px 0;
+}
