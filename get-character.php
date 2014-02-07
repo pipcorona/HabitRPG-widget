@@ -117,10 +117,10 @@
 			echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="./img/habitrpg/spritesmith/head/head_0.png" /></div>';
 			break;
 		case "head_special_0":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -29; left: 22;"':'" style="top: -4; left:22;"').'><img src="./img/habitrpg/backer-only/BackerOnly-Equip-ShadeHelmet.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -24; left: 22;"':'" style="top: 1; left:22;"').'><img src="./img/habitrpg/backer-only/BackerOnly-Equip-ShadeHelmet.gif" /></div>';
 			break;
 		case "head_special_1":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -9; left: 25;"':'" style="top: 16; left:25;"').'><img src="./img/habitrpg/backer-only/ContributorOnly-Equip-CrystalHelmet.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -3; left: 25;"':'" style="top: 22; left:25;"').'><img src="./img/habitrpg/backer-only/ContributorOnly-Equip-CrystalHelmet.gif" /></div>';
 			break;
 		default:
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="./img/habitrpg/spritesmith/head/'.$items["head"].'.png" /></div>';
@@ -134,7 +134,7 @@
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="./img/habitrpg/backer-only/BackerOnly-Equip-ShadeArmor.gif" /></div>';
 			break;
 		case "armor_special_1":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:-9;"':'" style="top:16;"').'><img src="./img/habitrpg/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:-3;"':'" style="top:22;"').'><img src="./img/habitrpg/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
 			break;
 		default:
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="./img/habitrpg/spritesmith/armor/'.$preferences["size"].'_'.$items["armor"].'.png" /></div>';
@@ -151,12 +151,16 @@
 		case "weapon_special_1":
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="left:7;"':'" style="left:7;"').'"><img src="./img/habitrpg/spritesmith/weapon/'.$items["weapon"].'.png" /></div>';
 			break;
+		case "weapon_special_critical":
+			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="left: 13; top: 6;"':'" style="left: 13; top: 31;"').'"><img src="./img/habitrpg/backer-only/weapon_special_critical.gif" /></div>';
+			break;
 		default:
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="./img/habitrpg/spritesmith/weapon/'.$items["weapon"].'.png" /></div>';
 	}
 	
 	//Sleep
 	if($preferences["sleep"]==1){echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="./img/habitrpg/spritesmith/shop/zzz.png" /></div>';}
+
 ?>
 			</div>
 			<div class="text">
