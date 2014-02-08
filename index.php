@@ -9,7 +9,7 @@
 				include './inc/habitrpg-api.php';
 			?>
 				<!--Place this where you want the widget to show up-->
-				<iframe sandbox="allow-popups allow-scripts" src="http://habitrpg.pipcorona.net/get-character.php" style="border: 0; height: 273px;" />';
+				<iframe sandbox="allow-popups allow-scripts" src="http://habitrpg.pipcorona.net/get-character.php?method=session" style="border: 0; height: 273px;" />';
 		<!--End Method 1-->
 		
 		<!--Method 2-->

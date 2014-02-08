@@ -1,3 +1,8 @@
+<?php
+	if ($_GET['method']==="session"){ session_start(); }
+	include_once("./inc/analyticstracking.php");
+?>
+
 <link rel="stylesheet" type="text/css" href="./inc/habitrpg.css">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
@@ -11,6 +16,10 @@
 	if (isset($_GET['api_user']) && isset($_GET['api_key'])){
 		$api_user = $_GET['api_user'];
 		$api_key = $_GET['api_key'];
+	} elseif (isset($_SESSION['api_user']) && isset($_SESSION['api_key'])) {
+		$api_user = $_SESSION['api_user'];
+		$api_key = $_SESSION['api_key'];
+		unset($_SESSION['api_user'], $_SESSION['api_key']);
 	} else {
 		include './inc/habitrpg-api.php';
 	}
