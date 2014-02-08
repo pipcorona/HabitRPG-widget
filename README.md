@@ -26,7 +26,7 @@ This method has two options. If you don't want to host all the files on your ser
 
 ###Method 1
 
-Place the habitrpg-api.php file in your inc folder. Edit it to have you api key and user id and then chmod the file to read and write for user only (600) to keep those secure. Then grab the php code out of the index.html file between the method 1 comment tags and put it where you want it on your website. This will place an iframe that will display your info.
+Place the habitrpg-api.php file in your inc folder. Edit it to have you api key and user id and then chmod the file to read and write for user only (600) to keep those secure. Then grab the php include code from index.html between the method 1 tags. Place that at the very top of your webpage, even above the html tag. Then place the iframe code between the method one tags where you want it on your webpage. This will place an iframe that will display your info.
 
 ###Method 2
 

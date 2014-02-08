@@ -5,9 +5,11 @@
 	<body>
 		<!--Method 1-->
 			<?php
+				//Place this at the very top of your web page before anything else, even the <html> tag
 				include './inc/habitrpg-api.php';
-				echo '<iframe sandbox="allow-popups allow-scripts" src="http://habitrpg.pipcorona.net/get-character.php?api_user='.$api_user.'&api_key='.$api_key.'" style="border: 0; height: 273px;" />';
 			?>
+				<!--Place this where you want the widget to show up-->
+				<iframe sandbox="allow-popups allow-scripts" src="http://habitrpg.pipcorona.net/get-character.php" style="border: 0; height: 273px;" />';
 		<!--End Method 1-->
 		
 		<!--Method 2-->

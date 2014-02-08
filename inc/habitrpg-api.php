@@ -1,7 +1,6 @@
 <?php
-
-	$api_user = "";
-	$api_key = "";
-	
+	session_start();
+	$_SESSION['api_user'] = "";
+	$_SESSION['api_key'] = "";	
 ?>
 
