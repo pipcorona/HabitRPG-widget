@@ -1,0 +1,96 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Habitrpg-widget</title>
+  <meta name="description" content="A widget for HabitRPG that can be embedded in websites.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Habitrpg-widget</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">A widget for HabitRPG that can be embedded in websites.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/pipcorona/HabitRPG-widget/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/pipcorona/HabitRPG-widget/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/pipcorona/HabitRPG-widget" class="code">View Habitrpg-widget on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="habitrpg-widget" class="anchor" href="#habitrpg-widget"><span class="octicon octicon-link"></span></a>HabitRPG-widget</h1>
+
+<p>This project was designed to be used as a widget on your website to show your <a href="https://habitrpg.com">HabitRPG</a> character and some stats on your own personal website. It can be used two different ways which are explained below. There is a WordPress specific version that <a href="https://github.com/gersande">gersande</a> modified that is available <a href="http://gersande.github.io/HabitRPG-widget/">here</a>.</p>
+
+<h2>
+<a name="running-on-your-own-server" class="anchor" href="#running-on-your-own-server"><span class="octicon octicon-link"></span></a>Running on your own server</h2>
+
+<p>To run this on your own server you will need the following files:</p>
+
+<ul>
+<li>get-character.php</li>
+<li>habitrpg.css (inside inc folder)</li>
+<li>habitrpg-api.php (inside inc folder)</li>
+<li>habitrpg and its contents in the img folder</li>
+</ul><p>After placing all the files where they belong, edit the habitrpg-api.php file to have your api key and user id for the appropriate variables. Then chmod the file to have read and write for user only (600) to keep those keys secure.</p>
+
+<p>Wherever you want the widget to show up, use a php include and include get-character.php.</p>
+
+<p>You also might need to edit the include or image paths if you don't have the files placed in the "inc" or "img" folder.</p>
+
+<h2>
+<a name="running-through-an-iframe" class="anchor" href="#running-through-an-iframe"><span class="octicon octicon-link"></span></a>Running through an iframe</h2>
+
+<p>This method has two options. If you don't want to host all the files on your server you can accomplish this two ways.</p>
+
+<h3>
+<a name="method-1" class="anchor" href="#method-1"><span class="octicon octicon-link"></span></a>Method 1</h3>
+
+<p>Place the habitrpg-api.php file in your inc folder. Edit it to have you api key and user id and then chmod the file to read and write for user only (600) to keep those secure. Then grab the php include code from index.html between the method 1 tags. Place that at the very top of your webpage, even above the html tag. Then place the iframe code between the method one tags where you want it on your webpage. This will place an iframe that will display your info.</p>
+
+<h3>
+<a name="method-2" class="anchor" href="#method-2"><span class="octicon octicon-link"></span></a>Method 2</h3>
+
+<p>This method is the least secure but the only method I've been able to think of if you have a site where you want to display this but can't upload files (like blogger or something similar). In this one you copy the code from index.html between the method 2 tags and paste it where you want it. Then you have to replace PUT_USER_ID_HERE and PUT_API_KEY_HERE with your user id and api key. The reason this isn't secure is because those would be visible in the html source so someone could use that and then access your account through the API.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/pipcorona" class="avatar"><img src="https://0.gravatar.com/avatar/e097ffb8306c0ded7fa245f0222b3280?d=https%3A%2F%2Fidenticons.github.com%2F964dca837e0554db78eed21d76a7c425.png&amp;r=x&amp;s=60" width="48" height="48"/></a> <a href="https://github.com/pipcorona">pipcorona</a> maintains <a href="https://github.com/pipcorona/HabitRPG-widget">Habitrpg-widget</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/pipcorona/HabitRPG-widget/tarball/master" class="tar">tar</a><a href="https://github.com/pipcorona/HabitRPG-widget/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
