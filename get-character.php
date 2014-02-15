@@ -1,7 +1,8 @@
 <?php
-	if ($_GET['method']==="session"){ session_start(); }
-	include_once("./inc/analyticstracking.php");
+	if ($_GET['method']==="session"){ session_id($_GET['id']); session_start(); }
+	include_once("./inc/analyticstracking.php")
 ?>
+
 
 <link rel="stylesheet" type="text/css" href="./inc/habitrpg.css">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
