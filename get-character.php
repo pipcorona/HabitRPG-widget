@@ -84,6 +84,7 @@
 	
 	//Skin
 	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/skin/skin_'.$preferences["skin"].'.png" /></div>';
+	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/head/head_0.png" /></div>';
 	
 	//Mustache
 	if($preferences["mustache"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/beards/hair_mustache_'.$preferences["mustache"].'_'.$preferences["color"].'.png" /></div>';}
@@ -108,7 +109,7 @@
 		case NULL:
 			break;
 		case "Wolf-Cerberus":
-			echo '<div class="pet" style="top: 63px;"><img src="'.$imagedir.'/backer-only/BackerOnly-Pet-CerberusPup.gif" /></div>';
+			echo '<div class="pet" style="top: 65px;"><img src="'.$imagedir.'/backer-only/BackerOnly-Pet-CerberusPup.gif" /></div>';
 			break;
 		default:
 			echo '<div class="pet"><img src="'.$imagedir.'/spritesmith/pets/Pet-'.$items["currentPet"].'.png" /></div>';
@@ -128,13 +129,12 @@
 	//Helmet
 	switch ($items["head"]){
 		case "head_base_0";
-			echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/head/head_0.png" /></div>';
 			break;
 		case "head_special_0":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -24; left: 22;"':'" style="top: 1; left:22;"').'><img src="'.$imagedir.'/backer-only/BackerOnly-Equip-ShadeHelmet.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -19; left: 22;"':'" style="top: 1; left:22;"').'><img src="'.$imagedir.'/backer-only/BackerOnly-Equip-ShadeHelmet.gif" /></div>';
 			break;
 		case "head_special_1":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: -3; left: 25;"':'" style="top: 22; left:25;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalHelmet.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: 2; left: 25;"':'" style="top: 22; left:25;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalHelmet.gif" /></div>';
 			break;
 		default:
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/head/'.$items["head"].'.png" /></div>';
@@ -148,7 +148,7 @@
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/backer-only/BackerOnly-Equip-ShadeArmor.gif" /></div>';
 			break;
 		case "armor_special_1":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:-3;"':'" style="top:22;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:2;"':'" style="top:22;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
 			break;
 		default:
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/armor/'.$preferences["size"].'_'.$items["armor"].'.png" /></div>';
@@ -160,13 +160,13 @@
 		case "weapon_base_0":
 			break;
 		case "weapon_special_0":
-			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="top: -30; left: 22;"':'" style="top: -5; left: 22;"').'><img src="'.$imagedir.'/backer-only/BackerOnly-Weapon-DarkSoulsBlade.gif" /></div>';
+			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="top: -25; left: 22;"':'" style="top: -5; left: 22;"').'><img src="'.$imagedir.'/backer-only/BackerOnly-Weapon-DarkSoulsBlade.gif" /></div>';
 			break;
 		case "weapon_special_1":
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="left:7;"':'" style="left:7;"').'"><img src="'.$imagedir.'/spritesmith/weapon/'.$items["weapon"].'.png" /></div>';
 			break;
 		case "weapon_special_critical":
-			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="left: 13; top: 6;"':'" style="left: 13; top: 31;"').'"><img src="'.$imagedir.'/backer-only/weapon_special_critical.gif" /></div>';
+			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="top: 11; left: 13;"':'" style="left: 13; top: 31;"').'"><img src="'.$imagedir.'/backer-only/weapon_special_critical.gif" /></div>';
 			break;
 		default:
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/weapon/'.$items["weapon"].'.png" /></div>';
