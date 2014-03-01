@@ -5,12 +5,13 @@
 
 
 <link rel="stylesheet" type="text/css" href="./inc/habitrpg.css">
+<link rel="stylesheet" type="text/css" href="./inc/spritesmith.css">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 <?php
 	//Set your image directory. This makes it easier for people who deploy this on their own server and don't want to follow the same file structure
 	//Set this to the folder that will contain the spritesmith and backer-only folders
-	$imagedir = './img/sprites';
+	$imagedir = './img/habitrpg';
 
 	//Checks to see if the user id and api key are set in the url, if not, uses the onse in the included file
 	//Make sure to set the included files permissions to read and write only for the user (600)
@@ -80,28 +81,28 @@
 	//The Following display all the sprite pictures. Some require special positions that don't match with the rest so case statements are used
 	
 	//Shirt
-	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/shirts/'.$preferences["size"].'_shirt_'.$preferences["shirt"].'.png" /></div>';
+	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$preferences["size"].'_shirt_'.$preferences["shirt"].'"></div>';
 	
 	//Skin
-	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/skin/skin_'.$preferences["skin"].'.png" /></div>';
-	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/head/head_0.png" /></div>';
+	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').' skin_'.$preferences["skin"].'"></div>';
+	echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').' head_0"></div>';
 	
 	//Mustache
-	if($preferences["mustache"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/beards/hair_mustache_'.$preferences["mustache"].'_'.$preferences["color"].'.png" /></div>';}
+	if($preferences["mustache"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').' hair_mustache_'.$preferences["mustache"].'_'.$preferences["color"].'"></div>';}
 	
 	//Beard
-	if($preferences["beard"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/beards/hair_beard_'.$preferences["beard"].'_'.$preferences["color"].'.png" /></div>';}
+	if($preferences["beard"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').' hair_beard_'.$preferences["beard"].'_'.$preferences["color"].'"></div>';}
 	
 	//Hair
-	if($preferences["base"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/hair/hair_base_'.$preferences["base"].'_'.$preferences["color"].'.png" /></div>';}
+	if($preferences["base"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').' hair_base_'.$preferences["base"].'_'.$preferences["color"].'"></div>';}
 	
 	//Bangs
-	if($preferences["bangs"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/hair/hair_bangs_'.$preferences["bangs"].'_'.$preferences["color"].'.png" /></div>';}
+	if($preferences["bangs"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').' hair_bangs_'.$preferences["bangs"].'_'.$preferences["color"].'"></div>';}
 	
 	//Mount
 	if($items["currentMount"]!=NULL){
-		echo '<div class="mounthead"><img src="'.$imagedir.'/spritesmith/mounts/Mount_Head_'.$items["currentMount"].'.png" /></div>';
-		echo '<div class="mountbody"><img src="'.$imagedir.'/spritesmith/mounts/Mount_Body_'.$items["currentMount"].'.png" /></div>';
+		echo '<div class="mounthead Mount_Head_'.$items["currentMount"].'"></div>';
+		echo '<div class="mountbody Mount_Body_'.$items["currentMount"].'"></div>';
 	}
 	
 	//Pet
@@ -112,7 +113,7 @@
 			echo '<div class="pet" style="top: 65px;"><img src="'.$imagedir.'/backer-only/BackerOnly-Pet-CerberusPup.gif" /></div>';
 			break;
 		default:
-			echo '<div class="pet"><img src="'.$imagedir.'/spritesmith/pets/Pet-'.$items["currentPet"].'.png" /></div>';
+			echo '<div class="pet Pet-'.$items["currentPet"].'"></div>';
 	}
 	
 	//Shield
@@ -123,7 +124,7 @@
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/backer-only/BackerOnly-Shield-TormentedSkull.gif" /></div>';
 			break;
 		default:
-			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/shield/'.$items["shield"].'.png" /></div>';
+			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$items["shield"].'"></div>';
 	}
 
 	//Helmet
@@ -137,7 +138,7 @@
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top: 2; left: 25;"':'" style="top: 22; left:25;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalHelmet.gif" /></div>';
 			break;
 		default:
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/head/'.$items["head"].'.png" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$items["head"].'"></div>';
 	}
 	
 	//Armor
@@ -151,7 +152,7 @@
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:2;"':'" style="top:22;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
 			break;
 		default:
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/armor/'.$preferences["size"].'_'.$items["armor"].'.png" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$preferences["size"].'_'.$items["armor"].'"></div>';
 
 	}
 				
@@ -163,17 +164,17 @@
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="top: -25; left: 22;"':'" style="top: -5; left: 22;"').'><img src="'.$imagedir.'/backer-only/BackerOnly-Weapon-DarkSoulsBlade.gif" /></div>';
 			break;
 		case "weapon_special_1":
-			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="left:7;"':'" style="left:7;"').'"><img src="'.$imagedir.'/spritesmith/weapon/'.$items["weapon"].'.png" /></div>';
+			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount  '.$items["weapon"].'" style="left:7;"':'  '.$items["weapon"].'" style="left:7;"').'"></div>';
 			break;
 		case "weapon_special_critical":
 			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount" style="top: 11; left: 13;"':'" style="left: 13; top: 31;"').'"><img src="'.$imagedir.'/backer-only/weapon_special_critical.gif" /></div>';
 			break;
 		default:
-			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/weapon/'.$items["weapon"].'.png" /></div>';
+			echo '<div class="item'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$items["weapon"].'"></div>';
 	}
 	
 	//Sleep
-	if($preferences["sleep"]==1){echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/spritesmith/shop/zzz.png" /></div>';}
+	if($preferences["sleep"]==1){echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').' zzz"></div>';}
 
 ?>
 			</div>
