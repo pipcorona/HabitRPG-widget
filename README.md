@@ -1,6 +1,8 @@
 HabitRPG-widget
 ======
 
+**Currently the mystery items do not work with this widget. I am working on an update for this**
+
 This project was designed to be used as a widget on your website to show your [HabitRPG](https://habitrpg.com) character and some stats on your own personal website. It can be used two different ways which are explained below. There is a WordPress specific version that [gersande](https://github.com/gersande) modified that is available [here](http://gersande.github.io/HabitRPG-widget/).
 
 Running on your own server
