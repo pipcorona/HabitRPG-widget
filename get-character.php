@@ -116,6 +116,14 @@
 			echo '<div class="pet Pet-'.$items["currentPet"].'"></div>';
 	}
 	
+	//Back
+	switch ($items["back"]){
+		case NULL:
+			break;
+		default:
+			echo '<div class="base'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$items["back"].'"></div>';
+	}
+	
 	//Shield
 	switch ($items["shield"]){
 		case "shield_base_0":
@@ -149,7 +157,7 @@
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').'"><img src="'.$imagedir.'/backer-only/BackerOnly-Equip-ShadeArmor.gif" /></div>';
 			break;
 		case "armor_special_1":
-			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:2;"':'" style="top:22;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
+			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount" style="top:2;"':'" style="top:19;"').'><img src="'.$imagedir.'/backer-only/ContributorOnly-Equip-CrystalArmor.gif" /></div>';
 			break;
 		default:
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$preferences["size"].'_'.$items["armor"].'"></div>';
