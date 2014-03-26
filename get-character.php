@@ -99,6 +99,9 @@
 	//Bangs
 	if($preferences["bangs"]!=0){echo '<div class="hair'.(($items["currentMount"]!=NULL)?'-mount':'').' hair_bangs_'.$preferences["bangs"].'_'.$preferences["color"].'"></div>';}
 	
+	//Flower
+	if($preferences["flower"]!=0){echo '<div class="flower'.(($items["currentMount"]!=NULL)?'-mount':'').' hair_flower_'.$preferences["flower"].'"></div>';}
+	
 	//Mount
 	if($items["currentMount"]!=NULL){
 		echo '<div class="mounthead Mount_Head_'.$items["currentMount"].'"></div>';
@@ -147,6 +150,14 @@
 			break;
 		default:
 			echo '<div class="gear'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$items["head"].'"></div>';
+	}
+	
+	//Head Accessory
+	switch ($items["headAccessory"]){
+		case NULL;
+			break;
+		default:
+			echo '<div class="headacc'.(($items["currentMount"]!=NULL)?'-mount':'').' '.$items["headAccessory"].'"></div>';
 	}
 	
 	//Armor

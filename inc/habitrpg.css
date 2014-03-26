@@ -61,6 +61,34 @@ a.habitrpg {
 	z-index: 20;
 }
 
+.flower {
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	z-index: 37;
+}
+
+.flower-mount {
+	position: absolute;
+	top: -1px;
+	left: 25px;
+	z-index: 37;
+}
+
+.headacc {
+	position: absolute;
+	top: 19px;
+	left: 25px;
+	z-index: 36;
+}
+
+.headacc-mount {
+	position: absolute;
+	top: -1px;
+	left: 25px;
+	z-index: 36;
+}
+
 .gear {
 	position: absolute;
 	top: 19px;
@@ -161,7 +189,7 @@ a.habitrpg {
 	margin-right: 3px;
 	line-height: 16px;
 	vertical-align: top;
-	background-image: url(../img/habitrpg/glyphicons-halfling.png);
+	background-image: url(../img/glyphicons-halfling.png);
 	background-position: 14px 14px;
 	background-repeat: no-repeat;
 }
