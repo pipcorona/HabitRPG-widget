@@ -1,6 +1,5 @@
 <?php
 	if ($_GET['method']==="session"){ session_id($_GET['id']); session_start(); }
-	include_once("./inc/analyticstracking.php")
 ?>
 
 
